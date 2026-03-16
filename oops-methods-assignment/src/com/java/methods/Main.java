@@ -39,7 +39,7 @@ public class Main {
 
         payment.isPaymentAmount(6924);
 
-        payment.isRefundPayment(order.orderStatus);
+        payment.isRefundPayment();
 
     }
 }

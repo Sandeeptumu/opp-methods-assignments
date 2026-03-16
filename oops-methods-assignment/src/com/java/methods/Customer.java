@@ -126,7 +126,7 @@ public class Customer {
             return false;
         }
     }
-    boolean isRefundPayment(String refund){
+    boolean isRefundPayment(){
         if (orderStatus == "CANCELLED"){
             System.out.println("Refund Is Possible");
             return true;

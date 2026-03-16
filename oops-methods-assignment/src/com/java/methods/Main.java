@@ -16,7 +16,7 @@ public class Main {
 
         System.out.println("----THE ORDER DETAILS----");
 
-        Customer order = new Customer(1);
+        Customer order = new Customer(1233,3345,2346,true,true,"DELIVERED",false);
 
         long totalAmount = order.getTotalOrderAmount();
         System.out.println("The Total Amount Of The Order Is: " + totalAmount);
@@ -25,12 +25,21 @@ public class Main {
             System.out.println("Order Is Payed: " +orderPayed);
         }
 
-        boolean updatedOrderStatus = order.updateOrderStatus("PLACED");
+        boolean updatedOrderStatus = order.updateOrderStatus("SHIPPING");
             System.out.println("Order Status:  "+ updatedOrderStatus);
 
         boolean cancelOrder  = order.cancelOrder(true);
         System.out.println("ORDER CAN BE CANCELED: " +cancelOrder);
 
         order.displayOrderSummary();
+
+        Customer payment =new Customer ("UPI",true);
+
+        payment.displayPayment();
+
+        payment.isPaymentAmount(6924);
+
+        payment.isRefundPayment(order.orderStatus);
+
     }
 }

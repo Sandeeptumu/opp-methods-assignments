@@ -3,19 +3,24 @@ package com.java.methods;
 public class Customer {
 
     int id;
+    int order;
     String name;
     String email;
     long phoneNumber;
     String address1;
     boolean isActive;
     long totalOrder;
-    short orderPrice1;
-    short orderPrice2;
-    short orderPrice3;
+    long orderPrice1;
+    long orderPrice2;
+    long orderPrice3;
     boolean orderPayed;
     boolean isDelevered;
     String orderStatus;
     boolean cancelOrder;
+    String paymentMethod;
+    boolean paymentAmount;
+    boolean refundPayment;
+
 
 
     Customer() {
@@ -57,14 +62,14 @@ public class Customer {
         return true;
     }
 
-    Customer(int order) {
-        orderPrice1 = 30000;
-        orderPrice2 = 2300;
-        orderPrice3 = 23423;
-        orderPayed = true;
-        isDelevered = true;
-        orderStatus = "SHIPPED";
-
+    public Customer(long orderPrice1, long orderPrice2, long orderPrice3, boolean orderPayed, boolean isDelevered, String orderStatus, boolean cancelOrder) {
+        this.orderPrice1 = orderPrice1;
+        this.orderPrice2 = orderPrice2;
+        this.orderPrice3 = orderPrice3;
+        this.orderPayed = orderPayed;
+        this.isDelevered = isDelevered;
+        this.orderStatus = orderStatus;
+        this.cancelOrder = cancelOrder;
     }
 
     long getTotalOrderAmount() {
@@ -103,5 +108,32 @@ public class Customer {
 
     }
 
+    Customer(String paymentMethod, boolean paymentAmount) {
+        this.paymentMethod = paymentMethod;
+        this.paymentAmount = paymentAmount;
+    }
+
+    void displayPayment() {
+        System.out.println("---THE PAYMENT DETAILS---");
+    }
+
+    boolean isPaymentAmount(long paymentAmount) {
+        if (paymentAmount == totalOrder) {
+            System.out.println("Matches the order");
+            return true;
+        } else {
+            System.out.println("Does Not Match The Order ");
+            return false;
+        }
+    }
+    boolean isRefundPayment(String refund){
+        if (orderStatus == "CANCELLED"){
+            System.out.println("Refund Is Possible");
+            return true;
+        }else{
+            System.out.println("Refund Is Not Possible");
+            return false;
+        }
+    }
 }
 

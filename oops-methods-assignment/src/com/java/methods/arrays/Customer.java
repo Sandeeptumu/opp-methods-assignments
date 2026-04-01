@@ -1,15 +1,15 @@
 package com.java.methods.arrays;
 
 public class Customer {
-    int id;
-    String name;
-    String email;
-    String phoneNumber;
-    String address;
-    byte age;
-    char gender;
+    public int id;
+    public String name;
+    public String email;
+    public String phoneNumber;
+    public String address;
+    public byte age;
+    public char gender;
 
-    Customer(int id, String name, String email, String phoneNumber, String address, byte age,char gender) {
+    public Customer(int id, String name, String email, String phoneNumber, String address, byte age, char gender) {
         this.id = id;
         this.name = name;
         this.email = email;

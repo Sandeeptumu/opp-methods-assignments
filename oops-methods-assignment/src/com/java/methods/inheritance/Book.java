@@ -1,11 +1,11 @@
 package com.java.methods.inheritance;
 
-public class Book extends Product{
+public class Book extends Product {
     long price;
     String author;
     int pages;
 
-    public Book(){
+    public Book() {
         System.out.println("Book Constructor called");
     }
 
@@ -16,9 +16,12 @@ public class Book extends Product{
         this.pages = pages;
     }
 
-    void displayBookDetails(){
-        System.out.println("Price: " +price);
-        System.out.println("Author: " +author);
-        System.out.println("pages: " +pages);
+    @Override
+    void displayDetails() {
+        super.displayDetails();
+        System.out.println("Price: " + price);
+        System.out.println("Author: " + author);
+        System.out.println("pages: " + pages);
     }
+
 }

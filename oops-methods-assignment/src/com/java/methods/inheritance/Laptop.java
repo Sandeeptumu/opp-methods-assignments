@@ -1,13 +1,13 @@
 package com.java.methods.inheritance;
 
-public class Laptop extends Product{
+public class Laptop extends Product {
     int hardDiskSize;
     String operatingSystem;
     int ram;
     String graphicCard;
     long price;
 
-    public Laptop(){
+    public Laptop() {
         super();
         System.out.println("Laptop constructor called");
     }
@@ -17,16 +17,21 @@ public class Laptop extends Product{
         this.graphicCard = graphicCard;
         this.price = price;
         this.ram = ram;
-        this.operatingSystem=operatingSystem;
+        this.operatingSystem = operatingSystem;
         this.hardDiskSize = hardDiskSize;
     }
 
-    void displayLaptopDetails(){
-        displayProductDetails();
-        System.out.println("Hard Disk: " +hardDiskSize);
-        System.out.println("Operating System: " +operatingSystem);
-        System.out.println("Ram: " +ram);
-        System.out.println("price: " +price);
-        System.out.println("Graphic Card: " +graphicCard);
+    @Override
+    void displayDetails() {
+        super.displayDetails();
+        System.out.println("Hard Disk: " + hardDiskSize);
+        System.out.println("Operating System: " + operatingSystem);
+        System.out.println("Ram: " + ram);
+        System.out.println("price: " + price);
+        System.out.println("Graphic Card: " + graphicCard);
+    }
+
+    void displayDetails(String name, int year, boolean isAvailable) {
+        System.out.println("Name: " + name + " Year: " + year + " Is Available" + isAvailable);
     }
 }

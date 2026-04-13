@@ -17,7 +17,7 @@ public class Main {
         Payment payment;
         switch (choice) {
             case 1:
-                payment = new CashOnDelivery();
+                payment = new CashOnDelivery("1", "Sandeep", "1-02-2025", "Cash On Delivery");
                 orderService = new OrderService(payment);
                 System.out.println("Enter Amount");
                 amount = scanner.nextDouble();
@@ -28,7 +28,7 @@ public class Main {
                     System.out.println("Order Processed Successfully");
                 break;
             case 2:
-                payment = new CreditCardPayment();
+                payment = new CreditCardPayment("2", " Kushaal", "12-03-2026", "Credit Card");
                 orderService = new OrderService(payment);
                 System.out.println("Enter Amount");
                 amount = scanner.nextDouble();
@@ -39,7 +39,7 @@ public class Main {
                     System.out.println("Order Processed Successfully through credit card");
                 break;
             case 3:
-                payment = new DebitCardPayment();
+                payment = new DebitCardPayment("3", "Kutty", "4-02-2026", "Debit Card");
                 orderService = new OrderService(payment);
                 System.out.println("Enter Amount");
                 amount = scanner.nextDouble();
@@ -50,7 +50,7 @@ public class Main {
                     System.out.println("Order Processed Successfully through Debit card");
                 break;
             case 4:
-                payment = new UpiPayment();
+                payment = new UpiPayment("4", "Mahi", "19-03-2003", "UPI");
                 orderService = new OrderService(payment);
                 System.out.println("Enter Amount");
                 amount = scanner.nextDouble();

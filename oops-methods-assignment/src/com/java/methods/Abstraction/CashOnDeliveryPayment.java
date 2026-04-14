@@ -1,8 +1,8 @@
-package com.java.methods.Abstraction;
+package com.java.methods.abstraction;
 
-public class CashOnDelivery extends Payment{
+public class CashOnDeliveryPayment extends Payment{
 
-    public CashOnDelivery(String id, String customerName, String paymentDate, String mode) {
+    public CashOnDeliveryPayment(String id, String customerName, String paymentDate, String mode) {
         super(id, customerName, paymentDate, mode);
     }
 

@@ -1,4 +1,4 @@
-package com.java.methods.Abstraction;
+package com.java.methods.abstraction;
 
 public abstract class Payment  {
 

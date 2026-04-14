@@ -17,7 +17,7 @@ public class Main {
         Payment payment;
         switch (choice) {
             case 1:
-                payment = new CashOnDeliveryPayment("1", "Sandeep", "1-02-2025", "Cash On Delivery");
+                payment = new CashOnDeliveryPayment("1", "Sandy", "1-02-2025", "Cash On Delivery");
                 orderService = new OrderService(payment);
                 System.out.println("Enter Amount");
                 amount = scanner.nextDouble();
